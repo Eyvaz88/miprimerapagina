@@ -101,23 +101,29 @@ a {
   display: none;
 }
 
-.imagenes {
+
+.contenedor-imagenes{
   display: flex;
-  flex-direction: row;
-  
-  justify-content: center;
+
 }
 
-img{
-  width: 800px;
-}
+  .contenedor-imagenes img {
+    width: 100%;
+    height: auto;
 
-@media (max-width: 768px) {
-  .imagenes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
+  .imagen-ajustada{
+    height: 137px;
+  }
+
+  @media (max-width: 768px) {
+    .contenedor-imagenes {
+      flex-direction: column;
+    }
+  
+    .imagen-ajustada {
+      width: 100%; /* Ajustar al 100% del ancho del contenedor en dispositivos estrechos */
+    }
   }
 
 .footer {
